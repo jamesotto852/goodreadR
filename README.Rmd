@@ -1,0 +1,95 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# goodreadR <img src="man/figures/logo.png"  align="right"  width="120" style="padding-left:10px;background-color:white;" />
+
+
+**goodreadR** exports several functions for scraping and tidying user data from [goodreads.com](https://www.goodreads.com/).
+Internally, these tasks are handled via [**rvest**](https://rvest.tidyverse.org/), [**stringr**](https://stringr.tidyverse.org/), and other [tidyverse](https://www.tidyverse.org/) packages.
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/jamesotto852/goodreadR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesotto852/goodreadR/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
+## Installation
+
+You can install **goodreadR** from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("jamesotto852/goodreadR")
+```
+
+## Getting User data
+
+The main function for getting user data is `get_read()`.
+It accepts a profile url as its argument and returns a tibble of the scraped user data.
+Below, I show the data from my profile as an example:
+
+```{r, message = FALSE}
+library("goodreadR")
+library("tidyverse")
+
+df <- get_read("https://www.goodreads.com/user/show/98834377-james")
+  
+glimpse(df)
+
+```
+
+You may have noticed that in the above example, the columns with dates (`pub_date`, `start_date`, etc.) are not machine-readable.
+This is remedied via `fix_dates()` which cleans the output of `get_read()`.
+
+```{r}
+df |>
+  fix_dates() |>
+  select(ends_with("date")) |>
+  glimpse()
+```
+
+Note: each value of `start_date` is `NA`.
+This is not an error---I just do not set start dates on my goodreads account!
+
+***
+
+Finally, if you know your username, `get_profile_url()` will return the corresponding url (ready for `get_read()`):
+
+```{r}
+get_profile_url("bookononism")
+```
+
+## Awards data
+
+**goodreadR** also includes data for various literary awards, scraped from [Wikipedia](https://wikipedia.com).
+Currently, `df_Hugo`, `df_Nebula`, `df_Clarke`, and `df_World_Fantasy` are included.
+I hope to add more in the future, keeping them up-to-date.
+
+```{r}
+df_Hugo
+```
+
+## Goodreads Dashboard
+
+I have also developed a [**shiny**](https://shiny.rstudio.com/) app which makes use of this package,
+communicating various statistics about a user's goodreads data---see it in action [here](https://jamesotto.app/Goodreads-Dashboard)
+
+
+
+
+
+
+
+
+
+
