@@ -3,16 +3,16 @@
 
 # goodreadR <img src="man/figures/logo.png"  align="right"  width="120" style="padding-left:10px;background-color:white;" />
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/jamesotto852/goodreadR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesotto852/goodreadR/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 **goodreadR** exports several functions for scraping and tidying user
 data from [goodreads.com](https://www.goodreads.com/). Internally, these
 tasks are handled via [**rvest**](https://rvest.tidyverse.org/),
 [**stringr**](https://stringr.tidyverse.org/), and other
 [tidyverse](https://www.tidyverse.org/) packages.
-
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/jamesotto852/goodreadR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesotto852/goodreadR/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
 
 ## Installation
 
@@ -45,7 +45,7 @@ glimpse(df)
 #> $ author     <chr> "Nix, Garth", "Nix, Garth", "Tchaikovsky, Adrian", "Tchaiko…
 #> $ pages      <int> 705, 491, 565, 600, 264, 416, 413, 468, 336, 201, 416, 264,…
 #> $ avg_rating <dbl> 4.27, 4.16, 4.06, 4.28, 4.29, 4.36, 4.31, 4.32, 3.86, 4.18,…
-#> $ n_ratings  <int> 114832, 199790, 24167, 84341, 149416, 106250, 126776, 20825…
+#> $ n_ratings  <int> 114833, 199791, 24168, 84351, 149424, 106257, 126789, 20827…
 #> $ pub_date   <chr> "Apr 21, 2001", "May 1995", "May 14, 2019", "Jun 04, 2015",…
 #> $ rating     <int> 5, 5, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 5, 4, 4, 5, 3, 5,…
 #> $ review     <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…

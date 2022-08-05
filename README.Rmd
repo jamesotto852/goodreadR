@@ -14,14 +14,12 @@ knitr::opts_chunk$set(
 ```
 
 # goodreadR <img src="man/figures/logo.png"  align="right"  width="120" style="padding-left:10px;background-color:white;" />
-
-
-**goodreadR** exports several functions for scraping and tidying user data from [goodreads.com](https://www.goodreads.com/).
-Internally, these tasks are handled via [**rvest**](https://rvest.tidyverse.org/), [**stringr**](https://stringr.tidyverse.org/), and other [tidyverse](https://www.tidyverse.org/) packages.
-
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/jamesotto852/goodreadR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesotto852/goodreadR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
+
+**goodreadR** exports several functions for scraping and tidying user data from [goodreads.com](https://www.goodreads.com/).
+Internally, these tasks are handled via [**rvest**](https://rvest.tidyverse.org/), [**stringr**](https://stringr.tidyverse.org/), and other [tidyverse](https://www.tidyverse.org/) packages.
 
 ## Installation
 
