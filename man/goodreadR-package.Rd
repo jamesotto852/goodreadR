@@ -6,6 +6,8 @@
 \alias{goodreadR-package}
 \title{goodreadR: Scrape and Tidy Goodreads User Data}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Scrape and tidy user data from goodreads.com with tools from `rvest` and other tidyverse pacakges.
 }
 \author{

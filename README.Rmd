@@ -81,8 +81,8 @@ df_Hugo
 
 ## Goodreads Dashboard
 
-I have also developed a [**shiny**](https://shiny.rstudio.com/) app which makes use of this package,
-communicating various statistics about a user's goodreads data---see it in action [here](https://jamesotto.app/Goodreads-Dashboard)
+I have also developed a [**shiny**](https://shiny.rstudio.com/) app which makes use of this package---facilitating the exploration of data from any [goodreads.com](https://goodreads.com) user profile.
+See it in action [here](https://jamesotto.app/Goodreads-Dashboard)!
 
 
 
