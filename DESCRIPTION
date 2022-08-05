@@ -1,0 +1,33 @@
+Package: goodreadR
+Title: Scrape and Tidy Goodreads User Data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "James",
+           family = "Otto",
+           role = c("aut", "cre"),
+           email = "jamesotto852@gmail.com",
+           comment = c(ORCID = "0000-0002-0665-2515"))
+Description:  Scrape and tidy user data from goodreads.com with tools 
+  from `rvest` and other tidyverse pacakges. 
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports:
+  rvest,
+  httr2,
+  dplyr,
+  stringr,
+  lubridate,
+  glue,
+  purrr,
+  tidyr,
+  jsonlite,
+  magrittr,
+  assertthat
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
+LazyData: true
