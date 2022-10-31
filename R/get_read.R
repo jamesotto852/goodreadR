@@ -84,9 +84,9 @@ clean_book_table <- function(df) {
       pub_date = X12,
       rating = X14,
       review = X16,
-      times_read = X21,
-      start_date = X22,
-      end_date = X23
+      times_read = X20,
+      start_date = X21,
+      end_date = X22
     ) %>%
     # break title into title, series, and series_no
     # remove parentheses around series if needed
